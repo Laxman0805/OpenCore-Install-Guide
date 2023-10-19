@@ -1,8 +1,8 @@
 DefinitionBlock ("", "SSDT", 2, "DRTNIA", "spoof", 0x00000000)
 {
-    External (_SB_.PCI0.PEG0.PEGP, DeviceObj)
+    External (_SB.PCI0.GPP0.PEGP, DeviceObj)
 
-    Method (_SB.PCI0.PEG0.PEGP._DSM, 4, NotSerialized)
+    Method (_SB.PCI0.GPP0.PEGP._DSM, 4, NotSerialized)
     {
         If ((!Arg2 || !_OSI ("Darwin")))
         {
